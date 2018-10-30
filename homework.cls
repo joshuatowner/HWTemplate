@@ -51,6 +51,7 @@
 \newtheorem{theorem}{Theorem}[problem]
 \newtheorem{corollary}{Corollary}[theorem]
 \newtheorem{lemma}[theorem]{Lemma}
+
 % Styling
 \setlength\parindent{0pt}
 \pagestyle{fancy}
@@ -58,6 +59,7 @@
 \lhead{Joshua Towner}
 \chead{\@class: \@assignment}
 \rhead{\thepage}
+\renewcommand*{\arraystretch}{1.5}
 
 % Settings
 \pgfplotsset{compat=1.16}
