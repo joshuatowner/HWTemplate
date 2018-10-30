@@ -16,6 +16,9 @@
 
 % Commands
 \DeclarePairedDelimiterX\set[1]\lbrace\rbrace{\def\given{\;\delimsize\vert\;}#1}
+\def\abs#1{\left\lvert#1\right\rvert}
+\def\prn#1{\left(#1\right)}
+\def\abr#1{\left\langle#1\right\rangle}
 \newcommand{\Z}{\mathbb{Z}}
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\N}{\mathbb{N}}
