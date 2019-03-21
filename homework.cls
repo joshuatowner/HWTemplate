@@ -14,6 +14,7 @@
 \RequirePackage{mathtools}
 \everymath{\displaystyle}
 
+
 % Commands
 \DeclarePairedDelimiterX\set[1]\lbrace\rbrace{\def\given{\;\delimsize\vert\;}#1}
 \def\abs#1{\left\lvert#1\right\rvert}
@@ -28,6 +29,10 @@
 \newcommand{\C}{\mathbb{C}}
 \newcommand{\Q}{\mathbb{Q}}
 \newcommand{\I}{\mathbb{I}}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
 
 \def\assignment#1{\gdef\@assignment{#1}}
 \def\class#1{\gdef\@class{#1}}
@@ -77,3 +82,13 @@
 
 % Settings
 \pgfplotsset{compat=1.16}
+
+% Options
+\DeclareOption{compact}{
+  \renewcommand{\problem}[1][\arabic{problem}]{
+    \vspace{0.75cm}
+    \refstepcounter{problem}
+    \textbf{\Large{Problem #1}}
+    \smallbreak}
+}
+\ProcessOptions\relax
